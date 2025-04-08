@@ -20,8 +20,11 @@ describe('fillTank', () => {
   });
 
   it('заправляє повний бак, якщо не передано amount', () => {
-    fillTank(customer, 50); // 50 грн/л, має поміститись 32 л => 32*50=1600
+    fillTank(customer, 50); // Full tank should add 32 liters (40 - 8)
+
     expect(customer.vehicle.fuelRemains).toBe(40);
+
+    // Cost = 32 * 50 = 1600.00
     expect(customer.money).toBe(1400);
   });
 
