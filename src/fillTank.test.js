@@ -78,3 +78,4 @@ describe('fillTank', () => {
     expect(customer.money).toBeCloseTo(833.33, 2);
   });
 });
+
